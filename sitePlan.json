@@ -1,0 +1,42 @@
+{
+  "businessName": "YEKOEMPIRE GLOBAL VENTURES",
+  "industry": "Fashion and Creative Design",
+  "tone": "creative and elegant",
+  "tagline": "Where Style Meets Creative Excellence",
+  "sections": [
+    {
+      "id": "hero",
+      "name": "Hero",
+      "copy": "YEKOEMPIRE GLOBAL VENTURES\n\nWhere Style Meets Creative Excellence\n\nElevate your fashion game with bespoke designs that capture your unique personality. From stunning custom outfits to innovative creative solutions, we bring your vision to life with exceptional craftsmanship and attention to detail.",
+      "imagePrompt": "Luxurious Nigerian fashion studio interior with elegant fabrics draped artistically, mannequins displaying colorful African-inspired haute couture garments, natural lighting streaming through large windows, modern workspace with design sketches and sewing equipment, warm golden hour ambiance, professional photography style",
+      "layout": "centered"
+    },
+    {
+      "id": "about",
+      "name": "About Us",
+      "copy": "Your Partner in Fashion Excellence\n\nAt YEKOEMPIRE GLOBAL VENTURES, we are passionate about transforming fashion dreams into reality. Based in Lagos State, Nigeria, we specialize in creating exceptional fashion pieces and providing innovative creative design solutions that set you apart.\n\nOur team combines traditional craftsmanship with contemporary design trends to deliver fashion that speaks volumes about your personal style. Whether you're looking for elegant formal wear, trendy casual outfits, or unique creative designs, we have the expertise and dedication to exceed your expectations.\n\nWe believe every client deserves fashion that fits perfectly, looks stunning, and makes them feel confident. That's why we take the time to understand your vision, work with premium materials, and deliver pieces that showcase meticulous attention to detail.",
+      "imagePrompt": "Bright, modern Nigerian fashion design studio with talented designers working on colorful African prints and contemporary fabrics, cutting tables with patterns, mood boards with fashion sketches, vibrant textile rolls organized on shelves, natural daylight creating an inspiring creative atmosphere, documentary style photography",
+      "layout": "split"
+    },
+    {
+      "id": "services",
+      "name": "Our Services",
+      "copy": "Tailored Solutions for Every Style\n\nCustom Fashion Design\nBring your fashion vision to life with our bespoke design services. We create custom outfits tailored to your exact measurements, preferences, and occasions. From traditional Nigerian attire to contemporary fashion pieces, every garment is crafted with precision and care.\n\nCreative Design Solutions\nBeyond fashion, we offer innovative creative design services for brands, events, and special projects. Our creative team delivers unique concepts that make lasting impressions and elevate your visual identity.\n\nFashion Consultation\nNot sure what style suits you best? Our expert fashion consultants provide personalized styling advice, helping you discover looks that complement your body type, personality, and lifestyle. We guide you through fabric selection, color coordination, and trend integration.\n\nAlterations & Modifications\nPerfect fit guaranteed. We provide professional alteration services to adjust existing garments, ensuring they fit flawlessly and look their absolute best.\n\nEvent Fashion\nMake every occasion memorable with our specialized event fashion services. Whether it's weddings, corporate events, photoshoots, or red carpet appearances, we create show-stopping pieces that capture attention and celebrate your special moments.",
+      "imagePrompt": "Collage-style visualization of diverse fashion services: elegant Nigerian woman being measured by designer, colorful fabrics and fashion sketches spread on table, close-up of hands sewing intricate beadwork on traditional attire, fashion consultation session, finished garments on display, vibrant and professional atmosphere",
+      "layout": "grid"
+    },
+    {
+      "id": "contact",
+      "name": "Get In Touch",
+      "copy": "Ready to Transform Your Style?\n\nLet's create something extraordinary together. Whether you have a specific design in mind or need creative guidance, we're here to help bring your fashion vision to life.\n\nVisit our studio or reach out today to schedule a consultation. We look forward to working with you!\n\nYEKOEMPIRE GLOBAL VENTURES\n14 Ayetoro road Ayobo, badek bus stop, opposite silver line hospital\nLagos State\nAdo odo LGA, Ogun State, Nigeria\n\nPhone: +234 802 090 3843\n\nBusiness Hours:\nMonday - Saturday: 9:00 AM - 6:00 PM\nSunday: By Appointment Only",
+      "imagePrompt": "Welcoming Nigerian fashion studio entrance with elegant signage, warm lighting, comfortable consultation area with fabric samples displayed, modern African-inspired interior design, inviting atmosphere that makes clients feel at home, professional and approachable aesthetic, golden hour lighting",
+      "layout": "centered"
+    }
+  ],
+  "contact": {
+    "phone": "+234 802 090 3843",
+    "email": "",
+    "address": "14 Ayetoro road Ayobo, badek bus stop, opposite silver line hospital, Lagos State, Ado odo LGA, Ogun State, Nigeria",
+    "whatsapp": "https://wa.me/2348020903843"
+  }
+}
