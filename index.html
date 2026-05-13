@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YEKOEMPIRE GLOBAL VENTURES - Where Style Meets Creative Excellence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #121212;
+            --color-accent: #c3b549;
+            --color-bg: #FFFFFF;
+            --color-text: #0A0A0A;
+            --color-surface: #f1f1f1;
+            --color-secondary-accent: #838383;
+            --font-display: 'Instrument Serif', serif;
+            --font-body: 'Karla', sans-serif;
+            --border-radius: 0px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(18, 18, 18, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--color-primary);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-size: 0.95rem;
+            font-weight: 400;
+            transition: color 0.3s ease;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 2px;
+            background: var(--color-text);
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            right: -100%;
+            width: 300px;
+            height: calc(100vh - 70px);
+            background: var(--color-bg);
+            box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+            transition: right 0.3s ease;
+            z-index: 999;
+            padding: 2rem;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 1.5rem;
+        }
+
+        .mobile-menu ul a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-size: 1.1rem;
+            font-weight: 400;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 0.5rem 0;
+            letter-spacing: 0.3px;
+        }
+
+        .mobile-menu ul a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Hero Section */
+        #hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            color: white;
+            width: 100%;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            max-width: 800px;
+        }
+
+        .hero-tagline {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            margin-bottom: 2rem;
+            color: var(--color-accent);
+            font-family: var(--font-display);
+            font-style: italic;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 600px;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--color-accent);
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: var(--border-radius);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .cta-button:hover {
+            background: #d4c65a;
+            transform: translateY(-2px);
+        }
+
+        /* Section Base */
+        section {
+            padding: 80px 2rem;
+        }
+
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        #about {
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.1s;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-text h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 2rem;
+            color: var(--color-primary);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--color-text);
+        }
+
+        /* Services Section */
+        #services {
+            background: var(--color-surface);
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.2s;
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .services-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--color-bg);
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(18, 18, 18, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: var(--color-accent);
+            transition: height 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--color-text);
+        }
+
+        /* Contact Section */
+        #contact {
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.3s;
+        }
+
+        .contact-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-content h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 2rem;
+            color: var(--color-primary);
+        }
+
+        .contact-intro {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            color: var(--color-text);
+        }
+
+        .contact-details {
+            background: var(--color-surface);
+            padding: 3rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .contact-details h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+        }
+
+        .contact-details p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .contact-details a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-details a:hover {
+            color: var(--color-primary);
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: var(--border-radius);
+            letter-spacing: 0.5px;
+            font-size: 0.95rem;
+        }
+
+        .contact-btn-primary {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        .contact-btn-primary:hover {
+            background: var(--color-accent);
+            color: var(--color-primary);
+        }
+
+        .contact-btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .contact-btn-whatsapp:hover {
+            background: #20BA5A;
+            transform: translateY(-2px);
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer p {
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            section {
+                padding: 48px 1.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image {
+                height: 400px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-details {
+                padding: 2rem 1.5rem;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+            }
+
+            .contact-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+
+            .whatsapp-float svg {
+                width: 26px;
+                height: 26px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 1.2rem 1.5rem;
+            }
+
+            .nav-logo {
+                font-size: 1rem;
+            }
+
+            .hero-content {
+                padding: 0 1.5rem;
+            }
+
+            .cta-button {
+                padding: 1rem 2rem;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">YEKOEMPIRE GLOBAL VENTURES</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-bg">
+            <img src="https://images.pexels.com/photos/36965151/pexels-photo-36965151.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="YEKOEMPIRE GLOBAL VENTURES Fashion Studio">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>YEKOEMPIRE GLOBAL VENTURES</h1>
+            <p class="hero-tagline">Where Style Meets Creative Excellence</p>
+            <p class="hero-description">Elevate your fashion game with bespoke designs that capture your unique personality. From stunning custom outfits to innovative creative solutions, we bring your vision to life with exceptional craftsmanship and attention to detail.</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.pexels.com/photos/7521131/pexels-photo-7521131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="About YEKOEMPIRE GLOBAL VENTURES">
+                </div>
+                <div class="about-text">
+                    <h2>Your Partner in Fashion Excellence</h2>
+                    <p>At YEKOEMPIRE GLOBAL VENTURES, we are passionate about transforming fashion dreams into reality. Based in Lagos State, Nigeria, we specialize in creating exceptional fashion pieces and providing innovative creative design solutions that set you apart.</p>
+                    <p>Our team combines traditional craftsmanship with contemporary design trends to deliver fashion that speaks volumes about your personal style. Whether you're looking for elegant formal wear, trendy casual outfits, or unique creative designs, we have the expertise and dedication to exceed your expectations.</p>
+                    <p>We believe every client deserves fashion that fits perfectly, looks stunning, and makes them feel confident. That's why we take the time to understand your vision, work with premium materials, and deliver pieces that showcase meticulous attention to detail.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="section-container">
+            <div class="services-header">
+                <h2>Tailored Solutions for Every Style</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Custom Fashion Design</h3>
+                    <p>Bring your fashion vision to life with our bespoke design services. We create custom outfits tailored to your exact measurements, preferences, and occasions. From traditional Nigerian attire to contemporary fashion pieces, every garment is crafted with precision and care.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Creative Design Solutions</h3>
+                    <p>Beyond fashion, we offer innovative creative design services for brands, events, and special projects. Our creative team delivers unique concepts that make lasting impressions and elevate your visual identity.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Fashion Consultation</h3>
+                    <p>Not sure what style suits you best? Our expert fashion consultants provide personalized styling advice, helping you discover looks that complement your body type, personality, and lifestyle. We guide you through fabric selection, color coordination, and trend integration.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Alterations & Modifications</h3>
+                    <p>Perfect fit guaranteed. We provide professional alteration services to adjust existing garments, ensuring they fit flawlessly and look their absolute best.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Event Fashion</h3>
+                    <p>Make every occasion memorable with our specialized event fashion services. Whether it's weddings, corporate events, photoshoots, or red carpet appearances, we create show-stopping pieces that capture attention and celebrate your special moments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-container">
+            <div class="contact-content">
+                <h2>Ready to Transform Your Style?</h2>
+                <p class="contact-intro">Let's create something extraordinary together. Whether you have a specific design in mind or need creative guidance, we're here to help bring your fashion vision to life.</p>
+                <p class="contact-intro">Visit our studio or reach out today to schedule a consultation. We look forward to working with you!</p>
+                
+                <div class="contact-details">
+                    <h3>YEKOEMPIRE GLOBAL VENTURES</h3>
+                    <p>14 Ayetoro road Ayobo, badek bus stop, opposite silver line hospital<br>
+                    Lagos State<br>
+                    Ado odo LGA, Ogun State, Nigeria</p>
+                    <p>Phone: <a href="tel:+2348020903843">+234 802 090 3843</a></p>
+                    <p><strong>Business Hours:</strong><br>
+                    Monday - Saturday: 9:00 AM - 6:00 PM<br>
+                    Sunday: By Appointment Only</p>
+                </div>
+
+                <div class="contact-buttons">
+                    <a href="tel:+2348020903843" class="contact-btn contact-btn-primary">Call Us</a>
+                    <a href="https://wa.me/2348020903843" class="contact-btn contact-btn-whatsapp" target="_blank">WhatsApp Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/2348020903843" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.135-2.135c2.369 1.228 5.020 1.875 7.865 1.875 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.547 0-5.053-0.717-7.2-2.067l-0.515-0.307-5.328 1.397 1.423-5.293-0.335-0.532c-1.482-2.361-2.265-5.095-2.265-7.865 0-7.364 5.991-13.355 13.355-13.355s13.355 5.991 13.355 13.355c0 7.364-5.991 13.355-13.355 13.355zM22.883 18.965c-0.397-0.199-2.349-1.159-2.713-1.292-0.365-0.132-0.63-0.199-0.895 0.199s-1.028 1.292-1.26 1.558c-0.232 0.265-0.463 0.298-0.86 0.099s-1.676-0.618-3.192-1.97c-1.18-1.053-1.977-2.351-2.209-2.748s-0.025-0.611 0.174-0.809c0.179-0.178 0.397-0.463 0.596-0.695s0.265-0.397 0.397-0.662c0.132-0.265 0.066-0.497-0.033-0.695s-0.895-2.155-1.227-2.951c-0.323-0.776-0.651-0.671-0.895-0.684-0.232-0.012-0.497-0.015-0.762-0.015s-0.695 0.099-1.060 0.497c-0.365 0.397-1.393 1.359-1.393 3.316s1.426 3.846 1.625 4.111c0.199 0.265 2.807 4.285 6.802 6.009 0.95 0.411 1.692 0.657 2.269 0.841 0.957 0.303 1.829 0.260 2.517 0.158 0.768-0.115 2.349-0.960 2.681-1.888s0.331-1.723 0.232-1.888c-0.099-0.165-0.365-0.265-0.762-0.463z"/>
+        </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="section-container">
+            <p>&copy; 2024 YEKOEMPIRE GLOBAL VENTURES. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
