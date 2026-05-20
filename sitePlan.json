@@ -1,42 +1,49 @@
 {
-  "businessName": "YEKOEMPIRE GLOBAL VENTURES",
-  "industry": "Fashion and Creative Design",
-  "tone": "creative and elegant",
-  "tagline": "Where Style Meets Creative Excellence",
+  "businessName": "Angeloma Beverage Co",
+  "industry": "FoodTech & Beverage Distribution",
+  "tone": "warm, professional, trustworthy",
+  "tagline": "Refreshing Nigeria, One Cold Drink at a Time",
   "sections": [
     {
       "id": "hero",
       "name": "Hero",
-      "copy": "YEKOEMPIRE GLOBAL VENTURES\n\nWhere Style Meets Creative Excellence\n\nElevate your fashion game with bespoke designs that capture your unique personality. From stunning custom outfits to innovative creative solutions, we bring your vision to life with exceptional craftsmanship and attention to detail.",
-      "imagePrompt": "Luxurious Nigerian fashion studio interior with elegant fabrics draped artistically, mannequins displaying colorful African-inspired haute couture garments, natural lighting streaming through large windows, modern workspace with design sketches and sewing equipment, warm golden hour ambiance, professional photography style",
+      "copy": "Welcome to Angeloma Beverage Co - Your trusted partner in cold chain beverage distribution across Nigeria. We ensure every drink reaches you perfectly chilled and refreshingly delicious. From Lagos to Ogun State and beyond, we deliver quality refreshments that keep Nigeria cool.",
+      "imagePrompt": "Photorealistic image of perfectly chilled bottled beverages with condensation droplets glistening on glass bottles, arranged in a modern cold storage facility with Nigerian tropical sunlight streaming through windows, vibrant colors of different drink bottles (orange, cola, water), professional commercial refrigeration units visible in background, clean and hygienic warehouse environment",
       "layout": "centered"
     },
     {
       "id": "about",
       "name": "About Us",
-      "copy": "Your Partner in Fashion Excellence\n\nAt YEKOEMPIRE GLOBAL VENTURES, we are passionate about transforming fashion dreams into reality. Based in Lagos State, Nigeria, we specialize in creating exceptional fashion pieces and providing innovative creative design solutions that set you apart.\n\nOur team combines traditional craftsmanship with contemporary design trends to deliver fashion that speaks volumes about your personal style. Whether you're looking for elegant formal wear, trendy casual outfits, or unique creative designs, we have the expertise and dedication to exceed your expectations.\n\nWe believe every client deserves fashion that fits perfectly, looks stunning, and makes them feel confident. That's why we take the time to understand your vision, work with premium materials, and deliver pieces that showcase meticulous attention to detail.",
-      "imagePrompt": "Bright, modern Nigerian fashion design studio with talented designers working on colorful African prints and contemporary fabrics, cutting tables with patterns, mood boards with fashion sketches, vibrant textile rolls organized on shelves, natural daylight creating an inspiring creative atmosphere, documentary style photography",
+      "copy": "Angeloma Drinks & Refreshments Limited is a leading FoodTech company specializing in cold chain logistics and beverage distribution. Based in Ogun State with operations extending across Lagos and beyond, we combine cutting-edge cold storage technology with reliable distribution networks to ensure beverages maintain optimal freshness from manufacturer to consumer.\n\nOur expertise in cold chain management means every bottle, can, and package is transported and stored at the perfect temperature. We understand that in Nigeria's tropical climate, proper refrigeration isn't just about comfort—it's essential for quality and safety.\n\nWhether you're a retailer, restaurant, event planner, or wholesaler, Angeloma Beverage Co delivers the refreshments your customers crave, exactly when and how you need them.",
+      "imagePrompt": "Wide-angle photorealistic shot of a modern Nigerian beverage distribution warehouse, rows of organized cold storage units filled with colorful drink products, professional logistics staff in branded uniforms checking inventory with tablets, delivery trucks visible through loading bay, bright clean facility with blue and white color scheme, professional foodtech operations",
       "layout": "split"
     },
     {
       "id": "services",
       "name": "Our Services",
-      "copy": "Tailored Solutions for Every Style\n\nCustom Fashion Design\nBring your fashion vision to life with our bespoke design services. We create custom outfits tailored to your exact measurements, preferences, and occasions. From traditional Nigerian attire to contemporary fashion pieces, every garment is crafted with precision and care.\n\nCreative Design Solutions\nBeyond fashion, we offer innovative creative design services for brands, events, and special projects. Our creative team delivers unique concepts that make lasting impressions and elevate your visual identity.\n\nFashion Consultation\nNot sure what style suits you best? Our expert fashion consultants provide personalized styling advice, helping you discover looks that complement your body type, personality, and lifestyle. We guide you through fabric selection, color coordination, and trend integration.\n\nAlterations & Modifications\nPerfect fit guaranteed. We provide professional alteration services to adjust existing garments, ensuring they fit flawlessly and look their absolute best.\n\nEvent Fashion\nMake every occasion memorable with our specialized event fashion services. Whether it's weddings, corporate events, photoshoots, or red carpet appearances, we create show-stopping pieces that capture attention and celebrate your special moments.",
-      "imagePrompt": "Collage-style visualization of diverse fashion services: elegant Nigerian woman being measured by designer, colorful fabrics and fashion sketches spread on table, close-up of hands sewing intricate beadwork on traditional attire, fashion consultation session, finished garments on display, vibrant and professional atmosphere",
+      "copy": "**Cold Chain Distribution**\nTemperature-controlled transportation ensuring your beverages arrive perfectly chilled. Our fleet of refrigerated vehicles covers Lagos, Ogun State, and surrounding regions with reliable daily deliveries.\n\n**Bulk Beverage Supply**\nCompetitive wholesale pricing for retailers, supermarkets, restaurants, and event venues. We stock a comprehensive range of soft drinks, juices, bottled water, and energy drinks from trusted brands.\n\n**Cold Storage Solutions**\nSecure, hygienic storage facilities with 24/7 temperature monitoring. Perfect for businesses needing reliable cold storage for their beverage inventory.\n\n**Event Beverage Supply**\nSpecialized service for weddings, corporate events, parties, and festivals. We deliver, set up cooling stations, and handle all your refreshment needs so you can focus on your guests.\n\n**Retail Partnership Program**\nFlexible supply agreements with competitive margins for small and medium retailers. We support your business growth with reliable stock availability and excellent service.",
+      "imagePrompt": "Split-screen photorealistic composition showing multiple aspects of beverage distribution: top half showing refrigerated delivery truck being loaded with crates of drinks by uniformed workers, bottom half showing organized retail display of colorful beverages in modern Nigerian supermarket coolers, professional lighting, emphasis on cold chain excellence and variety of products",
       "layout": "grid"
     },
     {
+      "id": "why-choose",
+      "name": "Why Choose Angeloma",
+      "copy": "**Expert Cold Chain Management**\nOur leadership brings professional cold chain logistics expertise, ensuring industry-leading temperature control and product quality throughout the distribution process.\n\n**Reliable & Timely Delivery**\nWe understand the Nigerian business environment. Our dependable delivery schedules mean you never run out of stock when you need it most.\n\n**Competitive Pricing**\nDirect relationships with manufacturers and efficient operations allow us to offer excellent value without compromising on service quality or product freshness.\n\n**Wide Coverage Area**\nServing Ogun State, Lagos, and expanding routes across Southwest Nigeria, we bring refreshing beverages to communities throughout the region.\n\n**Quality Assurance**\nEvery product is handled with care, stored properly, and delivered in perfect condition. Your reputation depends on product quality—so does ours.",
+      "imagePrompt": "Professional photorealistic image showing quality control in Nigerian beverage distribution: close-up of digital temperature monitoring display showing optimal cooling, hands in sanitary gloves checking beverage bottles, clipboard with delivery checklist, background showing organized warehouse with modern refrigeration systems, bright clean professional environment",
+      "layout": "cards"
+    },
+    {
       "id": "contact",
-      "name": "Get In Touch",
-      "copy": "Ready to Transform Your Style?\n\nLet's create something extraordinary together. Whether you have a specific design in mind or need creative guidance, we're here to help bring your fashion vision to life.\n\nVisit our studio or reach out today to schedule a consultation. We look forward to working with you!\n\nYEKOEMPIRE GLOBAL VENTURES\n14 Ayetoro road Ayobo, badek bus stop, opposite silver line hospital\nLagos State\nAdo odo LGA, Ogun State, Nigeria\n\nPhone: +234 802 090 3843\n\nBusiness Hours:\nMonday - Saturday: 9:00 AM - 6:00 PM\nSunday: By Appointment Only",
-      "imagePrompt": "Welcoming Nigerian fashion studio entrance with elegant signage, warm lighting, comfortable consultation area with fabric samples displayed, modern African-inspired interior design, inviting atmosphere that makes clients feel at home, professional and approachable aesthetic, golden hour lighting",
+      "name": "Get in Touch",
+      "copy": "Ready to ensure your beverage supply is always fresh, cold, and reliable? Contact Angeloma Beverage Co today.\n\nWhether you need regular bulk supplies, event refreshments, or cold storage solutions, we're here to serve you with professionalism and care.\n\n**Our Locations:**\n\n*Operations Office:*\nAdo Odo LGA, Ogun State, Nigeria\n\n*Distribution Point:*\n14 Ayetoro Road, Ayobo\nBadek Bus Stop, Opposite Silver Line Hospital\nLagos State, Nigeria\n\nCall us today for quotes, partnerships, or to place your order. We look forward to keeping Nigeria refreshed together!",
+      "imagePrompt": "Warm professional photorealistic image of Nigerian customer service representative with headset smiling while working at modern desk with computer, beverage product display visible in background, bright welcoming office environment, Lagos/Ogun business district visible through window, professional but friendly atmosphere conveying trust and reliability",
       "layout": "centered"
     }
   ],
   "contact": {
     "phone": "+234 802 090 3843",
-    "email": "",
-    "address": "14 Ayetoro road Ayobo, badek bus stop, opposite silver line hospital, Lagos State, Ado odo LGA, Ogun State, Nigeria",
+    "email": "info@angeloma.org",
+    "address": "14 Ayetoro Road, Ayobo, Badek Bus Stop, Opposite Silver Line Hospital, Lagos State | Operations: Ado Odo LGA, Ogun State",
     "whatsapp": "https://wa.me/2348020903843"
   }
 }
