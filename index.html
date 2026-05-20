@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YEKOEMPIRE GLOBAL VENTURES - Where Style Meets Creative Excellence</title>
+    <title>Angeloma Beverage Co - Refreshing Nigeria, One Cold Drink at a Time</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --color-primary: #121212;
-            --color-accent: #c3b549;
-            --color-bg: #FFFFFF;
-            --color-text: #0A0A0A;
-            --color-surface: #f1f1f1;
-            --color-secondary-accent: #838383;
-            --font-display: 'Instrument Serif', serif;
-            --font-body: 'Karla', sans-serif;
-            --border-radius: 0px;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #39280a;
+            --color-accent: #c94727;
+            --color-bg: #FBF0E8;
+            --color-text: #342008;
+            --color-surface: #3e1908;
+            --color-secondary-accent: #3c6023;
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'Source Sans 3', sans-serif;
+            --border-radius: 22px;
         }
 
         html {
@@ -35,13 +35,18 @@
             color: var(--color-text);
             background-color: var(--color-bg);
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
         h1, h2, h3, h4, h5, h6 {
             font-family: var(--font-display);
-            font-weight: 400;
+            font-weight: 600;
             line-height: 1.2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
         @keyframes fadeUp {
@@ -57,65 +62,55 @@
 
         /* Navigation */
         nav {
-            position: fixed;
+            position: sticky;
             top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(251, 240, 232, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(18, 18, 18, 0.1);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1.5rem 2rem;
+        nav .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1.2rem 2rem;
         }
 
-        .nav-logo {
+        .logo {
             font-family: var(--font-display);
-            font-size: 1.2rem;
-            font-weight: 400;
+            font-size: 1.8rem;
+            font-weight: 600;
             color: var(--color-primary);
-            text-decoration: none;
-            letter-spacing: 0.5px;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 3rem;
+            gap: 2rem;
         }
 
         .nav-links a {
             text-decoration: none;
             color: var(--color-text);
-            font-size: 0.95rem;
             font-weight: 400;
             transition: color 0.3s ease;
-            letter-spacing: 0.3px;
         }
 
         .nav-links a:hover {
             color: var(--color-accent);
         }
 
-        /* Mobile Menu Button */
         .mobile-menu-btn {
             display: none;
             flex-direction: column;
             cursor: pointer;
             gap: 4px;
-            z-index: 1001;
         }
 
         .mobile-menu-btn span {
             width: 25px;
-            height: 2px;
+            height: 3px;
             background: var(--color-text);
             transition: all 0.3s ease;
             transform-origin: center;
@@ -133,7 +128,6 @@
             transform: rotate(-45deg) translate(6px, -6px);
         }
 
-        /* Mobile Menu */
         .mobile-menu {
             position: fixed;
             top: 70px;
@@ -141,7 +135,7 @@
             width: 300px;
             height: calc(100vh - 70px);
             background: var(--color-bg);
-            box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
             transition: right 0.3s ease;
             z-index: 999;
             padding: 2rem;
@@ -163,11 +157,10 @@
             text-decoration: none;
             color: var(--color-text);
             font-size: 1.1rem;
-            font-weight: 400;
+            font-weight: 500;
             transition: color 0.3s ease;
             display: block;
             padding: 0.5rem 0;
-            letter-spacing: 0.3px;
         }
 
         .mobile-menu ul a:hover {
@@ -180,99 +173,75 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
             overflow: hidden;
             animation: fadeUp 0.6s ease forwards;
         }
 
-        .hero-bg {
+        #hero::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.pexels.com/photos/7414290/pexels-photo-7414290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
         }
 
-        .hero-bg img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .hero-overlay {
+        #hero::after {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            right: 0;
+            bottom: 0;
             background: rgba(0, 0, 0, 0.55);
-            z-index: 1;
+            z-index: -1;
         }
 
         .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            color: white;
-            width: 100%;
+            max-width: 900px;
+            padding: 2rem;
         }
 
         .hero-content h1 {
-            font-size: clamp(2.5rem, 6vw, 5rem);
-            margin-bottom: 1.5rem;
-            letter-spacing: 1px;
-            max-width: 800px;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
         }
 
-        .hero-tagline {
-            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+        .hero-content p {
+            font-size: 1.25rem;
             margin-bottom: 2rem;
-            color: var(--color-accent);
-            font-family: var(--font-display);
-            font-style: italic;
-        }
-
-        .hero-description {
-            font-size: 1.1rem;
             line-height: 1.8;
-            max-width: 600px;
-            margin-bottom: 3rem;
-            font-weight: 300;
         }
 
         .cta-button {
             display: inline-block;
-            padding: 1.2rem 3rem;
-            background: var(--color-accent);
-            color: var(--color-primary);
+            padding: 1rem 2.5rem;
+            background-color: var(--color-accent);
+            color: white;
             text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
             border-radius: var(--border-radius);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-size: 0.9rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(201, 71, 39, 0.4);
         }
 
         .cta-button:hover {
-            background: #d4c65a;
             transform: translateY(-2px);
-        }
-
-        /* Section Base */
-        section {
-            padding: 80px 2rem;
-        }
-
-        .section-container {
-            max-width: 1400px;
-            margin: 0 auto;
+            box-shadow: 0 6px 20px rgba(201, 71, 39, 0.6);
         }
 
         /* About Section */
         #about {
+            padding: 80px 0;
             animation: fadeUp 0.6s ease forwards;
             animation-delay: 0.1s;
         }
@@ -285,46 +254,43 @@
         }
 
         .about-image {
-            width: 100%;
-            height: 600px;
+            border-radius: var(--border-radius);
             overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
         .about-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
         }
 
         .about-text h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 2rem;
+            font-size: 3rem;
             color: var(--color-primary);
+            margin-bottom: 1.5rem;
         }
 
         .about-text p {
             margin-bottom: 1.5rem;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             line-height: 1.8;
-            color: var(--color-text);
         }
 
         /* Services Section */
         #services {
-            background: var(--color-surface);
+            padding: 80px 0;
+            background-color: rgba(57, 40, 10, 0.05);
             animation: fadeUp 0.6s ease forwards;
             animation-delay: 0.2s;
         }
 
-        .services-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .services-header h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 1rem;
+        #services h2 {
+            font-size: 3rem;
             color: var(--color-primary);
+            text-align: center;
+            margin-bottom: 3rem;
         }
 
         .services-grid {
@@ -334,50 +300,79 @@
         }
 
         .service-card {
-            background: var(--color-bg);
-            padding: 2.5rem;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(18, 18, 18, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 0;
-            background: var(--color-accent);
-            transition: height 0.3s ease;
-        }
-
-        .service-card:hover::before {
-            height: 100%;
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
         }
 
         .service-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            color: var(--color-accent);
             margin-bottom: 1rem;
-            color: var(--color-primary);
         }
 
         .service-card p {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: var(--color-text);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* Why Choose Section */
+        #why-choose {
+            padding: 80px 0;
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.3s;
+        }
+
+        #why-choose h2 {
+            font-size: 3rem;
+            color: var(--color-primary);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .why-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .why-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--color-secondary-accent);
+            transition: transform 0.3s ease;
+        }
+
+        .why-card:hover {
+            transform: translateX(5px);
+        }
+
+        .why-card h3 {
+            font-size: 1.6rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .why-card p {
+            line-height: 1.8;
+            font-size: 1.05rem;
         }
 
         /* Contact Section */
         #contact {
+            padding: 80px 0;
+            background-color: rgba(57, 40, 10, 0.05);
             animation: fadeUp 0.6s ease forwards;
-            animation-delay: 0.3s;
+            animation-delay: 0.4s;
         }
 
         .contact-content {
@@ -387,50 +382,51 @@
         }
 
         .contact-content h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 2rem;
+            font-size: 3rem;
             color: var(--color-primary);
-        }
-
-        .contact-intro {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 3rem;
-            color: var(--color-text);
-        }
-
-        .contact-details {
-            background: var(--color-surface);
-            padding: 3rem;
-            margin-bottom: 2rem;
-            text-align: left;
-        }
-
-        .contact-details h3 {
-            font-size: 1.8rem;
             margin-bottom: 1.5rem;
-            color: var(--color-primary);
         }
 
-        .contact-details p {
-            margin-bottom: 1rem;
-            font-size: 1.05rem;
+        .contact-content p {
+            font-size: 1.15rem;
             line-height: 1.8;
+            margin-bottom: 2rem;
         }
 
-        .contact-details a {
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-item h3 {
+            font-size: 1.4rem;
             color: var(--color-accent);
+            margin-bottom: 1rem;
+        }
+
+        .contact-item a {
+            color: var(--color-primary);
             text-decoration: none;
+            font-weight: 500;
             transition: color 0.3s ease;
         }
 
-        .contact-details a:hover {
-            color: var(--color-primary);
+        .contact-item a:hover {
+            color: var(--color-accent);
         }
 
         .contact-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
             margin-top: 2rem;
@@ -438,50 +434,44 @@
 
         .contact-btn {
             display: inline-block;
-            padding: 1rem 2.5rem;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
+            padding: 1rem 2rem;
             border-radius: var(--border-radius);
-            letter-spacing: 0.5px;
-            font-size: 0.95rem;
-        }
-
-        .contact-btn-primary {
-            background: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             color: white;
         }
 
-        .contact-btn-primary:hover {
-            background: var(--color-accent);
-            color: var(--color-primary);
+        .contact-btn.phone {
+            background-color: var(--color-primary);
+            box-shadow: 0 4px 15px rgba(57, 40, 10, 0.3);
         }
 
-        .contact-btn-whatsapp {
-            background: #25D366;
-            color: white;
+        .contact-btn.email {
+            background-color: var(--color-accent);
+            box-shadow: 0 4px 15px rgba(201, 71, 39, 0.3);
         }
 
-        .contact-btn-whatsapp:hover {
-            background: #20BA5A;
+        .contact-btn:hover {
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* WhatsApp Float Button */
+        /* WhatsApp Floating Button */
         .whatsapp-float {
             position: fixed;
-            bottom: 2rem;
-            right: 2rem;
+            bottom: 30px;
+            right: 30px;
             width: 60px;
             height: 60px;
-            background: #25D366;
+            background-color: #25D366;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-            z-index: 999;
-            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-decoration: none;
         }
 
@@ -491,22 +481,21 @@
         }
 
         .whatsapp-float svg {
-            width: 32px;
-            height: 32px;
+            width: 35px;
+            height: 35px;
             fill: white;
         }
 
         /* Footer */
         footer {
-            background: var(--color-primary);
-            color: white;
+            background-color: var(--color-surface);
+            color: var(--color-bg);
             text-align: center;
             padding: 2rem;
         }
 
         footer p {
-            font-size: 0.95rem;
-            letter-spacing: 0.3px;
+            font-size: 1rem;
         }
 
         /* Responsive */
@@ -519,8 +508,12 @@
                 display: flex;
             }
 
-            section {
-                padding: 48px 1.5rem;
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
             }
 
             .about-content {
@@ -528,57 +521,53 @@
                 gap: 2rem;
             }
 
-            .about-image {
-                height: 400px;
+            .about-text h2,
+            #services h2,
+            #why-choose h2,
+            .contact-content h2 {
+                font-size: 2.2rem;
             }
 
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-details {
-                padding: 2rem 1.5rem;
+            #hero,
+            #about,
+            #services,
+            #why-choose,
+            #contact {
+                padding: 48px 0;
             }
 
             .contact-buttons {
                 flex-direction: column;
             }
 
-            .contact-btn {
-                width: 100%;
-                text-align: center;
-            }
-
             .whatsapp-float {
                 width: 50px;
                 height: 50px;
-                bottom: 1.5rem;
-                right: 1.5rem;
+                bottom: 20px;
+                right: 20px;
             }
 
             .whatsapp-float svg {
-                width: 26px;
-                height: 26px;
+                width: 28px;
+                height: 28px;
             }
         }
 
         @media (max-width: 480px) {
-            .nav-container {
-                padding: 1.2rem 1.5rem;
+            nav .container {
+                padding: 1rem;
             }
 
-            .nav-logo {
-                font-size: 1rem;
+            .logo {
+                font-size: 1.4rem;
             }
 
-            .hero-content {
-                padding: 0 1.5rem;
+            .hero-content h1 {
+                font-size: 2rem;
             }
 
-            .cta-button {
-                padding: 1rem 2rem;
-                width: 100%;
-                text-align: center;
+            .container {
+                padding: 0 1rem;
             }
         }
     </style>
@@ -586,12 +575,13 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">YEKOEMPIRE GLOBAL VENTURES</a>
+        <div class="container">
+            <div class="logo">Angeloma Beverage Co</div>
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#why-choose">Why Choose Us</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="mobile-menu-btn">
@@ -608,36 +598,32 @@
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
+            <li><a href="#why-choose">Why Choose Us</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
 
     <!-- Hero Section -->
     <section id="hero">
-        <div class="hero-bg">
-            <img src="https://images.pexels.com/photos/36965151/pexels-photo-36965151.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="YEKOEMPIRE GLOBAL VENTURES Fashion Studio">
-        </div>
-        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>YEKOEMPIRE GLOBAL VENTURES</h1>
-            <p class="hero-tagline">Where Style Meets Creative Excellence</p>
-            <p class="hero-description">Elevate your fashion game with bespoke designs that capture your unique personality. From stunning custom outfits to innovative creative solutions, we bring your vision to life with exceptional craftsmanship and attention to detail.</p>
-            <a href="#contact" class="cta-button">Get Started</a>
+            <h1>Angeloma Beverage Co</h1>
+            <p>Welcome to Angeloma Beverage Co - Your trusted partner in cold chain beverage distribution across Nigeria. We ensure every drink reaches you perfectly chilled and refreshingly delicious. From Lagos to Ogun State and beyond, we deliver quality refreshments that keep Nigeria cool.</p>
+            <a href="#contact" class="cta-button">Get In Touch</a>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about">
-        <div class="section-container">
+        <div class="container">
             <div class="about-content">
                 <div class="about-image">
-                    <img src="https://images.pexels.com/photos/7521131/pexels-photo-7521131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="About YEKOEMPIRE GLOBAL VENTURES">
+                    <img src="https://images.pexels.com/photos/5853176/pexels-photo-5853176.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Angeloma Beverage Co Operations">
                 </div>
                 <div class="about-text">
-                    <h2>Your Partner in Fashion Excellence</h2>
-                    <p>At YEKOEMPIRE GLOBAL VENTURES, we are passionate about transforming fashion dreams into reality. Based in Lagos State, Nigeria, we specialize in creating exceptional fashion pieces and providing innovative creative design solutions that set you apart.</p>
-                    <p>Our team combines traditional craftsmanship with contemporary design trends to deliver fashion that speaks volumes about your personal style. Whether you're looking for elegant formal wear, trendy casual outfits, or unique creative designs, we have the expertise and dedication to exceed your expectations.</p>
-                    <p>We believe every client deserves fashion that fits perfectly, looks stunning, and makes them feel confident. That's why we take the time to understand your vision, work with premium materials, and deliver pieces that showcase meticulous attention to detail.</p>
+                    <h2>About Us</h2>
+                    <p>Angeloma Drinks & Refreshments Limited is a leading FoodTech company specializing in cold chain logistics and beverage distribution. Based in Ogun State with operations extending across Lagos and beyond, we combine cutting-edge cold storage technology with reliable distribution networks to ensure beverages maintain optimal freshness from manufacturer to consumer.</p>
+                    <p>Our expertise in cold chain management means every bottle, can, and package is transported and stored at the perfect temperature. We understand that in Nigeria's tropical climate, proper refrigeration isn't just about comfort—it's essential for quality and safety.</p>
+                    <p>Whether you're a retailer, restaurant, event planner, or wholesaler, Angeloma Beverage Co delivers the refreshments your customers crave, exactly when and how you need them.</p>
                 </div>
             </div>
         </div>
@@ -645,30 +631,57 @@
 
     <!-- Services Section -->
     <section id="services">
-        <div class="section-container">
-            <div class="services-header">
-                <h2>Tailored Solutions for Every Style</h2>
-            </div>
+        <div class="container">
+            <h2>Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>Custom Fashion Design</h3>
-                    <p>Bring your fashion vision to life with our bespoke design services. We create custom outfits tailored to your exact measurements, preferences, and occasions. From traditional Nigerian attire to contemporary fashion pieces, every garment is crafted with precision and care.</p>
+                    <h3>Cold Chain Distribution</h3>
+                    <p>Temperature-controlled transportation ensuring your beverages arrive perfectly chilled. Our fleet of refrigerated vehicles covers Lagos, Ogun State, and surrounding regions with reliable daily deliveries.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Creative Design Solutions</h3>
-                    <p>Beyond fashion, we offer innovative creative design services for brands, events, and special projects. Our creative team delivers unique concepts that make lasting impressions and elevate your visual identity.</p>
+                    <h3>Bulk Beverage Supply</h3>
+                    <p>Competitive wholesale pricing for retailers, supermarkets, restaurants, and event venues. We stock a comprehensive range of soft drinks, juices, bottled water, and energy drinks from trusted brands.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Fashion Consultation</h3>
-                    <p>Not sure what style suits you best? Our expert fashion consultants provide personalized styling advice, helping you discover looks that complement your body type, personality, and lifestyle. We guide you through fabric selection, color coordination, and trend integration.</p>
+                    <h3>Cold Storage Solutions</h3>
+                    <p>Secure, hygienic storage facilities with 24/7 temperature monitoring. Perfect for businesses needing reliable cold storage for their beverage inventory.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Alterations & Modifications</h3>
-                    <p>Perfect fit guaranteed. We provide professional alteration services to adjust existing garments, ensuring they fit flawlessly and look their absolute best.</p>
+                    <h3>Event Beverage Supply</h3>
+                    <p>Specialized service for weddings, corporate events, parties, and festivals. We deliver, set up cooling stations, and handle all your refreshment needs so you can focus on your guests.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Event Fashion</h3>
-                    <p>Make every occasion memorable with our specialized event fashion services. Whether it's weddings, corporate events, photoshoots, or red carpet appearances, we create show-stopping pieces that capture attention and celebrate your special moments.</p>
+                    <h3>Retail Partnership Program</h3>
+                    <p>Flexible supply agreements with competitive margins for small and medium retailers. We support your business growth with reliable stock availability and excellent service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section id="why-choose">
+        <div class="container">
+            <h2>Why Choose Angeloma</h2>
+            <div class="why-cards">
+                <div class="why-card">
+                    <h3>Expert Cold Chain Management</h3>
+                    <p>Our leadership brings professional cold chain logistics expertise, ensuring industry-leading temperature control and product quality throughout the distribution process.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Reliable & Timely Delivery</h3>
+                    <p>We understand the Nigerian business environment. Our dependable delivery schedules mean you never run out of stock when you need it most.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Competitive Pricing</h3>
+                    <p>Direct relationships with manufacturers and efficient operations allow us to offer excellent value without compromising on service quality or product freshness.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Wide Coverage Area</h3>
+                    <p>Serving Ogun State, Lagos, and expanding routes across Southwest Nigeria, we bring refreshing beverages to communities throughout the region.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Quality Assurance</h3>
+                    <p>Every product is handled with care, stored properly, and delivered in perfect condition. Your reputation depends on product quality—so does ours.</p>
                 </div>
             </div>
         </div>
@@ -676,42 +689,52 @@
 
     <!-- Contact Section -->
     <section id="contact">
-        <div class="section-container">
+        <div class="container">
             <div class="contact-content">
-                <h2>Ready to Transform Your Style?</h2>
-                <p class="contact-intro">Let's create something extraordinary together. Whether you have a specific design in mind or need creative guidance, we're here to help bring your fashion vision to life.</p>
-                <p class="contact-intro">Visit our studio or reach out today to schedule a consultation. We look forward to working with you!</p>
+                <h2>Get in Touch</h2>
+                <p>Ready to ensure your beverage supply is always fresh, cold, and reliable? Contact Angeloma Beverage Co today.</p>
+                <p>Whether you need regular bulk supplies, event refreshments, or cold storage solutions, we're here to serve you with professionalism and care.</p>
                 
-                <div class="contact-details">
-                    <h3>YEKOEMPIRE GLOBAL VENTURES</h3>
-                    <p>14 Ayetoro road Ayobo, badek bus stop, opposite silver line hospital<br>
-                    Lagos State<br>
-                    Ado odo LGA, Ogun State, Nigeria</p>
-                    <p>Phone: <a href="tel:+2348020903843">+234 802 090 3843</a></p>
-                    <p><strong>Business Hours:</strong><br>
-                    Monday - Saturday: 9:00 AM - 6:00 PM<br>
-                    Sunday: By Appointment Only</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Operations Office</h3>
+                        <p>Ado Odo LGA, Ogun State, Nigeria</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Distribution Point</h3>
+                        <p>14 Ayetoro Road, Ayobo<br>Badek Bus Stop, Opposite Silver Line Hospital<br>Lagos State, Nigeria</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Phone</h3>
+                        <p><a href="tel:+2348020903843">+234 802 090 3843</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@angeloma.org">info@angeloma.org</a></p>
+                    </div>
                 </div>
 
                 <div class="contact-buttons">
-                    <a href="tel:+2348020903843" class="contact-btn contact-btn-primary">Call Us</a>
-                    <a href="https://wa.me/2348020903843" class="contact-btn contact-btn-whatsapp" target="_blank">WhatsApp Us</a>
+                    <a href="tel:+2348020903843" class="contact-btn phone">Call Us Now</a>
+                    <a href="mailto:info@angeloma.org" class="contact-btn email">Send Email</a>
                 </div>
+
+                <p style="margin-top: 2rem;">Call us today for quotes, partnerships, or to place your order. We look forward to keeping Nigeria refreshed together!</p>
             </div>
         </div>
     </section>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/2348020903843" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2348020903843" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.135-2.135c2.369 1.228 5.020 1.875 7.865 1.875 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.547 0-5.053-0.717-7.2-2.067l-0.515-0.307-5.328 1.397 1.423-5.293-0.335-0.532c-1.482-2.361-2.265-5.095-2.265-7.865 0-7.364 5.991-13.355 13.355-13.355s13.355 5.991 13.355 13.355c0 7.364-5.991 13.355-13.355 13.355zM22.883 18.965c-0.397-0.199-2.349-1.159-2.713-1.292-0.365-0.132-0.63-0.199-0.895 0.199s-1.028 1.292-1.26 1.558c-0.232 0.265-0.463 0.298-0.86 0.099s-1.676-0.618-3.192-1.97c-1.18-1.053-1.977-2.351-2.209-2.748s-0.025-0.611 0.174-0.809c0.179-0.178 0.397-0.463 0.596-0.695s0.265-0.397 0.397-0.662c0.132-0.265 0.066-0.497-0.033-0.695s-0.895-2.155-1.227-2.951c-0.323-0.776-0.651-0.671-0.895-0.684-0.232-0.012-0.497-0.015-0.762-0.015s-0.695 0.099-1.060 0.497c-0.365 0.397-1.393 1.359-1.393 3.316s1.426 3.846 1.625 4.111c0.199 0.265 2.807 4.285 6.802 6.009 0.95 0.411 1.692 0.657 2.269 0.841 0.957 0.303 1.829 0.260 2.517 0.158 0.768-0.115 2.349-0.960 2.681-1.888s0.331-1.723 0.232-1.888c-0.099-0.165-0.365-0.265-0.762-0.463z"/>
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.252 1.408 1.409-5.239-0.32-0.524c-1.335-2.181-2.027-4.693-2.027-7.283 0-7.51 6.11-13.6 13.6-13.6s13.6 6.09 13.6 13.6-6.09 13.6-13.6 13.6zM21.907 18.303c-0.255-0.127-1.507-0.747-1.74-0.831-0.234-0.085-0.404-0.127-0.573 0.127s-0.658 0.831-0.807 1-0.297 0.191-0.552 0.064c-1.471-0.735-2.437-1.313-3.41-2.978-0.258-0.441 0.258-0.41 0.737-1.363 0.082-0.17 0.041-0.318-0.021-0.446s-0.573-1.382-0.786-1.892c-0.208-0.497-0.419-0.43-0.573-0.438-0.148-0.007-0.318-0.009-0.488-0.009s-0.446 0.064-0.679 0.318c-0.234 0.255-0.892 0.873-0.892 2.127s0.913 2.466 1.04 2.636c0.127 0.17 1.776 2.822 4.4 3.867 1.651 0.696 2.299 0.764 3.123 0.646 0.502-0.073 1.507-0.616 1.72-1.212s0.212-1.106 0.148-1.212c-0.063-0.106-0.233-0.17-0.488-0.297z"/>
         </svg>
     </a>
 
     <!-- Footer -->
     <footer>
-        <div class="section-container">
-            <p>&copy; 2024 YEKOEMPIRE GLOBAL VENTURES. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 Angeloma Beverage Co. All rights reserved.</p>
         </div>
     </footer>
 
